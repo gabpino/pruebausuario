@@ -62,6 +62,7 @@ public class UsuarioService implements iUsuarioService {
 		response.setMensaje("SUCCESS");
 		}catch(Exception e) {
 			response.setMensaje("Error al guardar registro.");
+			throw new NotValidUserException();
 		}
 		return response;
 	}
